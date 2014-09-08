@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring For Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Map                            KEYWORD1
+CreateMap                      KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+size                           KEYWORD2
+keyAt                          KEYWORD2
+valueAt                        KEYWORD2
+willOverflow                   KEYWORD2
+indexOf                        KEYWORD2
+contains                       KEYWORD2
+remove                         KEYWORD2
+setNullValue                   KEYWORD2
