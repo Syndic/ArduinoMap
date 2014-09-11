@@ -68,7 +68,10 @@ class Map
     */
     K keyAt(unsigned int idx)
     {
-      return keys[idx];
+      if (idx < currentIndex) {
+        return keys[idx];
+      }
+      return kNil;
     }
 
     /*
@@ -82,7 +85,10 @@ class Map
     */
     V valueAt(unsigned int idx)
     {
-      return values[idx];
+      if (idx < currentIndex) {
+        return values[idx];
+      }
+      return nil;
     }
 
     /*
@@ -168,7 +174,7 @@ class Map
           }
         }
       }
-      return -1;
+      return -1; // really?  -1 as an unsigned int?
     }
 
     /*
@@ -231,6 +237,7 @@ class Map
   protected:
     K keys[capacity];
     V values[capacity];
+    K kNil;
     V nil;
     int currentIndex;
     comparator cb_comparator;
